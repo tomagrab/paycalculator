@@ -1,0 +1,156 @@
+@import "_reset.css";
+@import "colors.css";
+
+ /* * {
+  outline: 1px solid #f00 !important;
+}  */
+
+@keyframes scroll {
+	from	{	transform:	translateX(100vw)}
+	to		{ 	transform: translateX(-100vw)}  
+}
+
+body, 
+body * {
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+.header {
+	background-color: var(--money); 
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 1rem 0;
+}
+
+.header__icons__container {
+	animation: scroll 10s linear infinite !important;
+}
+
+.header__icons__container i {
+	color: white;
+	font-size: 4rem;
+	margin: 0 2rem;
+}
+
+.body-wrapper {
+	padding: 1rem 3rem;
+	background-color: var(--light);
+}
+
+.section-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.section-wrapper:not(:last-child) {
+	margin-bottom: 2rem;
+}
+
+.pay-type-wrapper {
+	box-shadow: var(--drop-shadow);
+	padding: 1rem;
+	border-radius: .325rem;
+	background-color: var(--white);
+}
+
+.pay-type-wrapper > h2 {
+	font-size: 1.5rem;
+}
+
+.pay-type-options__container {
+	display: flex;
+	flex-direction: row;
+	margin-top: 1rem;
+}
+
+.pay-type-options__container > * {
+	padding: .25rem .75rem;
+}
+
+.pay-type__container * {
+	font-size: 1.25rem;
+}
+
+.pay-type__container *:hover {
+	cursor: pointer;
+}
+
+.input-box-wrapper, .results-wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: start;
+	gap: 2rem;
+	justify-content: space-between;
+	max-width: 100%;
+}
+
+
+.box__container {
+	box-shadow: var(--drop-shadow);
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	border-radius: .325rem;
+	background-color: var(--white);
+}
+
+.box__container h3 {
+	text-align: center;
+	font-size: 1.25rem;
+	padding: .75rem 0;
+}
+
+.input-box__container > input {
+	border: 2px solid var(--primary);
+	padding: .25rem .5rem;
+	border-radius: .325rem;
+}
+
+.input-box__container > input:focus {
+	background-color: white;
+}
+
+.input-box__container > input:not(:focus) {
+	background-color: #EBEBE4;
+}
+
+.box__container__group {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	border-bottom: 1px solid var(--gray-500);
+	margin: 1rem 0;
+}
+
+.box__container__group > p:first-child {
+	text-align: left;
+}
+
+.box__container__group > p:last-child {
+	text-align: right;
+}
+
+.statement__group > h4 {
+	text-align: center;
+	border-bottom: 4px dotted var(--primary);
+	margin-bottom: 1rem;
+	font-size: 1.25rem;
+}
+
+.earnings__group > h4 {
+	color: var(--warning);
+}
+
+.tax__group > h4 {
+	color: var(--danger);
+}
+
+.pay__group > h4 {
+	color: var(--success)
+}
