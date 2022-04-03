@@ -5,11 +5,6 @@
   outline: 1px solid #f00 !important;
 }  */
 
-@keyframes scroll {
-	from	{	transform:	translateX(100vw)}
-	to		{ 	transform: translateX(-100vw)}  
-}
-
 body, 
 body * {
 	font-family: 'Lato', sans-serif;
@@ -26,16 +21,20 @@ body {
 	flex-direction: row;
 	justify-content: center;
 	padding: 1rem 0;
+	animation: scroll 10s linear !important;
 }
 
 .header__icons__container {
-	animation: scroll 10s linear infinite !important;
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
 }
 
 .header__icons__container i {
-	color: white;
+	color: var(--white);
 	font-size: 4rem;
-	margin: 0 2rem;
 }
 
 .body-wrapper {
